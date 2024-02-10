@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
               fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),
           actions: const [Icon(Icons.add_alert_rounded)],
         ),
-        body: Column(
+        body:SingleChildScrollView(child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
-            SingleChildScrollView(
+            SingleChildScrollView(scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
                   Container(
@@ -85,45 +85,50 @@ class MyApp extends StatelessWidget {
               "recent news",
               style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
             ),
-            
+           
+              
+             Column(children:[
             Container(
               margin: const EdgeInsets.all(5),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30), color: Colors.black),
-              width: 120,
-              height: 100,
-              child: Row(
-                children: [
-                  Image.asset("images/Gazania-PNG-Image-HD.png"), 
-                  const Text(
-              "accd asdadf",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
-            ),
-                ],
+              width: 600,
+              height: 150,
+            
+                child: Row(
+                  children: [
+                    Image.asset("images/Gazania-PNG-Image-HD.png"), 
+                    const Text(
+                "accd asdadf",
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: Colors.amber),
+                            ),
+                  ],
+                ),
               ),
-            ),
+            
          
             Container(
               
               margin:const EdgeInsets.all(5),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(30), color: Colors.black),
-              width: 120,
-              height: 100,
+                  borderRadius: BorderRadius.circular(30),color: Colors.black ),
+              width:600,
+              height: 150,
               child: Row(
             
                 children: [
-                  Image.asset("images/Gazania-PNG-Image-HD.png"), 
+                   Image.asset("images/Gazania-PNG-Image-HD.png"), 
                 const Text(
               " accd asdadf",
-              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: Colors.amber),
             ),
                 ],
               ),
             ),
-           
+              ])
+                
           ],
-        ),
+        ),)
       ),
     );
   }
